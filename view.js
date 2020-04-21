@@ -93,8 +93,8 @@ function newGameVersion(gameELement){
     urlencoded.append("imageUrl", updatedGameImageUrl);
 
     console.log(gameELement);
-    updateGameRequest(gameELement.getAttribute('id'), urlencoded).then(createDomElement);
-
+    // updateGameRequest(gameELement.getAttribute('id'), urlencoded, createDomElement);
+    updateGameRequest(gameELement.getAttribute('id'), urlencoded).then(createDomEl)
 
 
 }
@@ -165,7 +165,8 @@ document.querySelector(".submitBtn").addEventListener("click", function(event){
         urlencoded.append("imageUrl", gameImageUrl.value);
         urlencoded.append("description", gameDescription.value);
 
-        createGameRequest(urlencoded, createDomElement);
+        // createGameRequest(urlencoded, createDomElement);
+        createGameRequest(urlencoded).then(createDomElement);
     }
 })
 
