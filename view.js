@@ -93,7 +93,7 @@ function newGameVersion(gameELement){
     urlencoded.append("imageUrl", updatedGameImageUrl);
 
     console.log(gameELement);
-    updateGameRequest(gameELement.getAttribute('id'), urlencoded, createDomElement);
+    updateGameRequest(gameELement.getAttribute('id'), urlencoded).then(createDomElement);
 
 
 
